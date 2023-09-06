@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald";
+}
+
+html {
+  background-color: #f6f1e9;
+}
+
+#container {
+  padding: 7%;
+  display: grid;
+  justify-items: center;
+  align-items: start;
+}
+
+#menu {
+  height: 500px;
+  width: 600px;
+  border: solid;
+  border-radius: 2%;
+  border: 5mm ridge #900c3f;
+  background-color: #c70039;
+
+  display: grid;
+  grid-template: 1fr 5fr 1fr / 1fr 2fr 1fr;
+}
+
+#header {
+  grid-area: 1 / 1 / 2 / 4;
+  font-size: 2rem;
+  font-family: "Oswald";
+  justify-self: center;
+  align-self: center;
+}
+
+#start {
+  background-color: #191825;
+  border: 2px solid yellow;
+  color: white;
+  height: 30px;
+  width: 100px;
+
+  grid-area: 3 / 3 / 4 / 4;
+  justify-self: center;
+  align-self: end;
+  margin: 10px;
+}
+
+button:hover,
+#start:hover {
+  background-color: gray;
+}
+
+#selector1,
+#selector2 {
+  display: grid;
+  grid-template: 1fr 1fr/ 1fr;
+  row-gap: 5px;
+  justify-items: center;
+  color: white;
+}
+
+#selector1 {
+  grid-area: 3 / 1 / 4/ 2;
+}
+
+#selector2 {
+  grid-area: 3 / 2 / 4/ 3;
+}
+
+#card-types,
+#repeat-button {
+  align-self: start;
+  color: white;
+}
+
+#repeats {
+  height: 85%;
+  color: white;
+}
+
+#selector-desc1,
+#selector-desc2 {
+  align-self: end;
+}
+
+#buttons {
+  grid-area: 2 / 3 / 3 / 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls {
+  margin-top: 4%;
+  width: 75%;
+  color: white;
+}
+
+#window {
+  grid-area: 2 / 1 / 3 / 3;
+  display: grid;
+  grid-template: 1fr / 1fr 2fr;
+}
+
+#review {
+  grid-area: 1 / 1 / 2 / 2;
+  align-self: center;
+  display: grid;
+  justify-items: center;
+  row-gap: 8px;
+  color: white;
+}
+
+.counter {
+  display: flex;
+}
+
+.counter-text {
+  margin-right: 4px;
+}
+
+#flash-card {
+  grid-area: 1 / 2 / 2 / 3;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #b30974;
+}
+
+#flash-card-q,
+#flash-card-ans {
+  border: 1px solid #b30974;
+  display: flex;
+  flex-basis: 50%;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+img {
+  width: 50%;
+  height: 40%;
+}
+
+button {
+  border-radius: 7%;
+}
+
+button,
+select {
+  background-color: #f94c10;
+  border: 2px solid yellow;
+}
+
+#title {
+  color: yellow;
+}
+
+.disabled {
+  opacity: 50%;
+  pointer-events: none;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Kanji Memory Cards</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="menu">
+        <button id="start" onclick="start()">Start</button>
+        <div id="header">
+          <p id="title">Kanji card menu</p>
+        </div>
+        <div id="window">
+          <div id="flash-card">
+            <div id="flash-card-q"></div>
+            <div id="flash-card-ans"></div>
+          </div>
+          <div id="review">
+            <div class="counter">
+              <p class="counter-text">Total:</p>
+              <p id="total-counter">0</p>
+            </div>
+            <div class="counter">
+              <p class="counter-text">Correct:</p>
+              <p id="correct-counter">0</p>
+            </div>
+            <div class="counter">
+              <p class="counter-text">Wrong:</p>
+              <p id="wrong-counter">0</p>
+            </div>
+          </div>
+        </div>
+        <div id="buttons">
+          <button
+            id="reveal"
+            class="controls disabled"
+            disabled
+            onclick="reveal()"
+          >
+            Reveal
+          </button>
+          <button
+            id="correct"
+            class="controls disabled"
+            disabled
+            onclick="correct()"
+          >
+            Correct
+          </button>
+          <button
+            id="wrong"
+            class="controls disabled"
+            disabled
+            onclick="wrong()"
+          >
+            Wrong
+          </button>
+          <button id="stop" class="controls disabled" disabled onclick="stop()">
+            Stop
+          </button>
+        </div>
+        <div id="selector1">
+          <p id="selector-desc1">Card types:</p>
+          <select id="card-types">
+            <option value="kanji-to-kana" selected>Kanji to Kana</option>
+            <option value="kana-to-kanji">Kana to Kanji</option>
+          </select>
+        </div>
+        <div id="selector2">
+          <p id="selector-desc2">Numer of repeats:</p>
+          <select id="repeats" onchange="update_list()">
+            <option value="1" selected>Once</option>
+            <option value="2">Twice</option>
+            <option value="3">Thrice</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
